@@ -1,0 +1,19 @@
+body {
+	background-image: url("../images/EO 1 ronin.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-right: 200px;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+div {
+    
+}
+
+p {
+	font-size: 40px;
+}
