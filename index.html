@@ -18,14 +18,16 @@
 		width: 100%;
 		height: 100%;
 	}
+	
+	.hidden {
+		display: none;
+	}
 
 	</style>
 	
 </head>
 
 <body>
-
-	<h1> Jona Huang </h1>
 
 	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
 		<ul class="nav navbar-nav navbar-right">
@@ -47,23 +49,34 @@
 		</ul>
 	</nav>
 
-	<header>
-		<div class=video_container>
-			<video width="320" height="240" autoplay muted loop>
-				<source src="./video/dungeon_crawler.mp4" type="video/mp4">
-			</video>
+	<header >
+		
+		<div class="video_container">
+			<div class="video">
+				<video autoplay muted loop>
+					<source src="./video/dungeon_crawler.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="content_inside_video">
+				<h1> Jona Huang </h1>
+			</div>
 		</div>
-		<div class="container">
-			<p>
-			Some text
-			</p>
-		</div>
+		
 	</header>
 
 	<div class="my_work">
 	
-		<a href="dialogue_node_editor.html">Dialogue node editor</a>
-	
+		<h3>My Work</h3>
+		<ul>
+			<li>
+				<a href="dialogue_node_editor.html">[Work in progress] Dialogue node editor</a>
+				<p>
+				I am envisioning a tool to easily create dialogue nodes.
+				If I could serialize the data in the HTML DOM objects as JSON, I could feed it into a script
+				that parses the JSON and creates Scriptable Objects in Unity.
+				</p>
+			</li>
+		</ul>
 	<div>
 	
 </body>
