@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/nodes.css"></link>
+	<script src="./js/drag_functions.js"></script>
+	<script src="./js/create_node.js"></script>
+	<script src="./js/clear_nodes.js"></script>
+	<script src="./js/draw_lines.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<h1>Dialogue Node Editor</h1>
+
+	<p> Number of nodes: </p>
+	<p id="number_of_nodes">1</p>
+
+	<form action="./action_page_save.php">
+		<input type="submit" value="Save">
+	</form>
+	
+	<br>
+	
+	<form action="./action_page_load.php">
+		<input type="submit" value="Load">
+	</form>
+	
+	<br>
+	
+	<p id="demo"></p>
+	
+	<br>
+	
+	<button onclick="createNewNode()">New node</button> <br>
+	<button onclick="clearNodes()">Clear</button>
+	
+	<br>
+
+	<div id="nodes">
+		<div class="node" id="node"
+			onmouseover="this.style.backgroundColor='blue'"
+			onmouseout="this.style.backgroundColor='white'">
+			
+			<div class="nodeheader" onmousedown=dragElement(this.parentNode) onmouseup=releaseMouse(this)>
+				Click here to move
+			</div>
+			
+			<div class="inlet">
+			Inlet
+			</div>
+			
+			<div class="outlet" onmousedown="drawLineToCursor(this)">
+			Outlet
+			</div>
+			
+			<form style="z-index:100">
+			Speaker:<br>
+			<input type="text" name="speaker"><br>
+			Dialogue:<br>
+			<input type="text" name="dialogue">
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
