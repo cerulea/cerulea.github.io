@@ -1,7 +1,7 @@
 /* Disable horizontal scrolling */
-body {
-  overflow-x: hidden;
-  overflow-y: scroll;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .navbar .hidden {
