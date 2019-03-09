@@ -1,3 +1,13 @@
+/* Disable horizontal scrolling */
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.navbar .hidden {
+	display: none;
+}
+
 .navbar ul {
   list-style-type: none;
   margin: 0;
@@ -26,29 +36,8 @@
   background-color: #4CAF50;
 }
 
-.video_container {
-	position: relative;
-    width: 100%;
-	height: 100%;
-    display: inline-block;
-    margin: 10px;
-	overflow: hidden;
-}
-
-.video {
-    position: absolute; 
-    top: 0;
-	left: 0;
-    width: 70%;
-	height: 70%; 
-    z-index: -1;
-} 
-  
-.content_inside_video {
-    position:absolute;
-    top: 0;
-	left: 0;
-    background: none;
-    color: white;
+video {
+	width: 1536px;
+	height: 864px;
 }
 
