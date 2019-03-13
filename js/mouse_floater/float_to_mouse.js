@@ -4,37 +4,74 @@ function initFloat()
 	var circle = document.getElementById("circle");
 	document.onmousemove = handleMouseMove;
 
-	setInterval( function() { moveCircle(circle, mousePosX, mousePosY); }, 10);
+	setInterval( function() { moveTo(circle, mousePosX, mousePosY); }, 10);
 	
-    function moveCircle(circle, targetX, targetY)
+	// Moves the element closer to the speicified position.
+	// Precondition:: the element's x is in attributes[1],
+	// and the element's y is in attributes[2]
+    function moveTo(elem, posX, posY)
 	{
-		var cx = circle.attributes[1].value;
-		var cy = circle.attributes[2].value;
+		//console.log("x: " + elem.attributes[1].value + ", y: " + elem.attributes[2].value);
+		//console.log(parseInt(elem.attributes[1].value, 10) + 1);
 		
-		if (cx < targetX)
+		// why don't these work?
+		
+		/*
+		if (elem.attributes[1].value < posX)
 		{
-			cx += 1;
+			elem.atrributes[1].value = parseInt(elem.attributes[1].value, 10) + 1;
 		}
-		else if (cx > targetX)
+		else if (elem.attributes[1].value > posX)
 		{
-			cx -= 1;
-		}
-		if (cy < targetY)
-		{
-			cy += 1;
-		}
-		else if (cy > targetY)
-		{
-			cy -= 1;
+			elem.atrributes[1].value = parseInt(elem.attributes[1].value, 10) - 1;
 		}
 		
-		circle.attributes[1].value = cx%500;
-		circle.attributes[2].value = cy%500;
+		if (elem.attributes[2].value < posY)
+		{
+			elem.atrributes[2].value = parseInt(elem.attributes[2].value, 10) + 1;
+		}
+		else if (elem.attributes[2].value > posX)
+		{
+			elem.atrributes[2].value = parseInt(elem.attributes[2].value, 10) - 1;
+		}
+		*/
+		
+		/*
+		if (elem.attributes[1].value < posX)
+		{
+			elem.atrributes[1].value = (parseInt(elem.attributes[1].value, 10) + 1).toString();
+		}
+		else if (elem.attributes[1].value > posX)
+		{
+			elem.atrributes[1].value = (parseInt(elem.attributes[1].value, 10) - 1).toString();
+		}
+		
+		if (elem.attributes[2].value < posY)
+		{
+			elem.atrributes[2].value = (parseInt(elem.attributes[2].value, 10) + 1).toString();
+		}
+		else if (elem.attributes[2].value > posX)
+		{
+			elem.atrributes[2].value = (parseInt(elem.attributes[2].value, 10) - 1).toString();
+		}
+		*/
+		
+		elem.attributes[1].value =
+			elem.attributes[1].value < posX
+				? parseInt(elem.attributes[1].value, 10) + 1
+				: (elem.attributes[1].value > posX ? parseInt(elem.attributes[1].value, 10) - 1 : elem.attributes[1].value);
+			
+		elem.attributes[2].value =
+			elem.attributes[2].value < posY
+				? parseInt(elem.attributes[2].value, 10) + 1
+				: (elem.attributes[2].value > posY ? parseInt(elem.attributes[2].value, 10) - 1 : elem.attributes[2].value);
+		
 	}
 	
     function handleMouseMove(event)
 	{
-		/*
+		// Taken from StackOverflow
+		
         var eventDoc, doc, body;
 
         event = event || window.event; // IE-ism
@@ -55,7 +92,6 @@ function initFloat()
               (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
               (doc && doc.clientTop  || body && body.clientTop  || 0 );
         }
-		*/
 		
         // Use event.pageX / event.pageY here
 		mousePosX = event.pageX;
