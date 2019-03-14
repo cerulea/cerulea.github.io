@@ -1,6 +1,7 @@
 function initFloat()
 {
-	var mousePosX, mousePosY;
+	var mousePosX;
+	var mousePosY;
 	var circle = document.getElementById("circle");
 	document.onmousemove = handleMouseMove;
 
