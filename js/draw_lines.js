@@ -1,10 +1,8 @@
 
-// Draws an SVG arrow from the position of the given element to the cursor,
-// stopping and connecting the outlet and the inlet
-// when the mouse is clicked on another node's inlet.
-// ESC to cancel.
-
-// Or.. just doesn't for now and awaits an inlet object to be clicked.
+// Awaits an inlet object other than the inlet with the same parent as the outlet passed in to be clicked.
+// When clicked, draws a line between the outlet and the inlet.
+// TO-DO: draw an arrow instead.
+// TO-DO: store the connection as an edge in a directed graph.
 function drawLineToCursor(outlet)
 {
 	var outletBoundingRect = outlet.getBoundingClientRect();
@@ -28,8 +26,6 @@ function drawLineToCursor(outlet)
 	
 	function addOnClickDrawArrowTo_ForAllInlets()
 	{
-		// add something like: drawArrrow(outlet_rect, inlet.position) to all inlets' onclick
-		
 		var nodesIterable = document.getElementById("nodes").getElementsByClassName("node");
 		var i;
 		for (i = 0; i < nodesIterable.length; ++i)
@@ -39,19 +35,26 @@ function drawLineToCursor(outlet)
 			var inletX = (inletBoundingRect.left + inletBoundingRect.right) / 2;
 			var inletY = (inletBoundingRect.top + inletBoundingRect.bottom) / 2;
 			
-			// nodesIterable[i].onclick = drawArrow(outletX, outletY, inletX, inletY);
-			
 			// we need to fix the Y problem
 			// the Y is offset by the SVG not being the entire page
 			// so we need to subtract out the offset
-			var offsetFromTop = document.getElementById("canvas").getBoundingClientRect().top;
-			console.log(offsetFromTop);
-			inlet.onclick = drawArrow(outletX, outletY - offsetFromTop, inletX, inletY - offsetFromTop);
+			if (outlet.parentNode != inlet.parentNode) // disallow node outlet connecting to its own inlet
+			{
+				var offsetFromTop = document.getElementById("canvas").getBoundingClientRect().top;
+				inlet.onclick = drawArrow(outletX, outletY - offsetFromTop, inletX, inletY - offsetFromTop);
+			}
 		}
 	}
 	
 	function removeOnClickDrawArrowTo_ForAllInlets()
 	{
+		var nodesIterable = document.getElementById("nodes").getElementsByClassName("node");
+		var i;
+		for (i = 0; i < nodesIterable.length; ++i)
+		{
+			var inlet = nodesIterable[i].getElementsByClassName("inlet")[0];
+			inlet.onclick = null;
+		}
 	}
 	
 	function drawArrow(startX, startY, endX, endY)
