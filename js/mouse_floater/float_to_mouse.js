@@ -11,6 +11,17 @@ function initFloat()
 	// and the element's y is in attributes[2]
     function moveTo(elem, posX, posY)
 	{
+		if (parseInt(elem.attributes[1].value) === posX
+			&& parseInt(elem.attributes[2].value) == posY)
+		{
+			console.log("Perfect!");
+			// play the animation to change the color
+		}
+		else
+		{
+			// play the animation to change the color back
+		}
+		
 		//console.log("x: " + elem.attributes[1].value + ", y: " + elem.attributes[2].value);
 		//console.log(parseInt(elem.attributes[1].value, 10) + 1);
 		
@@ -37,34 +48,41 @@ function initFloat()
 		*/
 		
 		/*
-		if (elem.attributes[1].value < posX)
+		if (parseInt(elem.attributes[1].value, 10) < posX)
 		{
+			console.log(parseInt(elem.attributes[1].value, 10));
+			console.log(parseInt(elem.attributes[1].value, 10) + 1);
+			console.log(parseInt(elem.attributes[1].value, 10) + 1);
 			elem.atrributes[1].value = (parseInt(elem.attributes[1].value, 10) + 1).toString();
 		}
-		else if (elem.attributes[1].value > posX)
+		else if (parseInt(elem.attributes[1].value, 10) > posX)
 		{
 			elem.atrributes[1].value = (parseInt(elem.attributes[1].value, 10) - 1).toString();
 		}
 		
-		if (elem.attributes[2].value < posY)
+		if (parseInt(elem.attributes[2].value, 10) < posY)
 		{
 			elem.atrributes[2].value = (parseInt(elem.attributes[2].value, 10) + 1).toString();
 		}
-		else if (elem.attributes[2].value > posX)
+		else if (parseInt(elem.attributes[2].value, 10) > posX)
 		{
 			elem.atrributes[2].value = (parseInt(elem.attributes[2].value, 10) - 1).toString();
 		}
 		*/
 		
+		
+		// Works
+		
 		elem.attributes[1].value =
 			elem.attributes[1].value < posX
-				? parseInt(elem.attributes[1].value, 10) + 1
-				: (elem.attributes[1].value > posX ? parseInt(elem.attributes[1].value, 10) - 1 : elem.attributes[1].value);
+				? parseInt(elem.attributes[1].value) + 1
+				: (elem.attributes[1].value > posX ? parseInt(elem.attributes[1].value) - 1 : elem.attributes[1].value);
 			
 		elem.attributes[2].value =
 			elem.attributes[2].value < posY
-				? parseInt(elem.attributes[2].value, 10) + 1
-				: (elem.attributes[2].value > posY ? parseInt(elem.attributes[2].value, 10) - 1 : elem.attributes[2].value);
+				? parseInt(elem.attributes[2].value) + 1
+				: (elem.attributes[2].value > posY ? parseInt(elem.attributes[2].value) - 1 : elem.attributes[2].value);
+		
 		
 	}
 	
