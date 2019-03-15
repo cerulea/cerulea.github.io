@@ -19,6 +19,7 @@ html, body {
 	top: 0;
 	z-index: 100;
 	float: left;
+	/* width: 100%; */
 }
 
 .navbar .hidden {
@@ -44,6 +45,7 @@ html, body {
 .navbar li {
 	float: left;
 	border-right: 1px solid #bbb;
+	
 }
 
 /* Doesn't work yet */
@@ -85,6 +87,8 @@ h1, h2, h3 {
 
 p {
 	margin-left: 40px;
+	font-family: Courier;
+	font-size: 20px;
 }
 
 #email {
@@ -97,4 +101,15 @@ p {
 #contact {
 	background-image: linear-gradient(180deg, white, blue);
 }
+
+#navbar_name_container {
+	
+}
+
+#navbar_name {
+	font-size: 15px;
+	font-family: sans-serif;
+	color: white;
+}
+
 
