@@ -99,10 +99,6 @@ p {
 	padding-bottom: 40px;
 }
 
-#contact {
-	background-image: linear-gradient(180deg, white, blue);
-}
-
 #navbar_name_container {
 	
 }
@@ -117,10 +113,45 @@ p {
 	width: 100%;
 	transition: background-color 4s;
 	background-color: blue;
+	padding: 15px 15px;
 }
 
 #header:hover {
-	background-color: aqua;
+	background-color: lavender;
 }
+
+#about {
+	width: 100%;
+	transition: background-color 4s;
+	background-color: pink;
+	padding: 15px 0px;
+}
+
+#about:hover {
+	background-color: rgb(100, 255, 25);
+}
+
+#portfolio {
+	width: 100%;
+	transition: background-color 4s;
+	background-color: rgb(237, 237, 237);
+	padding: 15px 0px;
+}
+
+#portfolio:hover {
+	background-color: rgb(170, 170, 170);
+}
+
+#contact {
+	padding: 15px 0px;
+	background-color: lavender;
+	transition: background-color 3s;
+}
+
+#contact:hover {
+	background-color: rgb(50, 50, 230);
+}
+
+
 
 
