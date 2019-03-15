@@ -94,3 +94,7 @@ p {
 	margin-bottom: 30px;
 }
 
+#contact {
+	background-image: linear-gradient(180deg, white, blue);
+}
+
