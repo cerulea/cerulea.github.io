@@ -17,11 +17,9 @@
 
 <body>
 
-	<h1 align="center">Jona Huang</h1>
-	<h2 align="center">Aspiring software engineer</h2>
+	<h1>Jona Huang</h1>
+	<h2>Aspiring software engineer</h2>
 	
-
-
 	<!-- Top navbar -->
 	<nav class="navbar">
 		<ul>
@@ -32,17 +30,14 @@
 			<a href="#about">About Me</a>
 			</li>
 			<li class="page-scroll">
-			<a href="#skills">Skills</a>
-			</li>
-			<li class="page-scroll">
 			<a href="#portfolio">My Work</a>
 			</li>
 			<li class="page-scroll">
 			<a href="#contact">Contact Me!</a>
 			</li>
-			<li>
+			<li class="float_right">
 				<!-- Link to SoundCloud -->
-				<a href="https://soundcloud.com/user-502205755">
+				<a href="https://soundcloud.com/user-502205755" target="_blank">
 					<img src="./images/soundcloud-icon.png" width="20px;" height="20px">
 				</a>
 			</li>
@@ -54,21 +49,40 @@
 		<source src="./video/dungeon_crawler.mp4" type="video/mp4">
 	</video>
 
-	<div class="my_work">
+	<div id="about">
+		<h2>About Me</h2>
+		<p>
+		I'm Jona, a second year computer science student at the University of California, Irvine.
+		I like programming, math, music, and anything tech.
+		The summer after high school, I got into game development with Unity.
+		I studied C# from Jamie King's C# tutorials on YouTube as the same time I picked up Unity,
+		and I used those skills to prototype a dungeon crawler the summer after that. It was an amazing experience!
+		
+		<br><br>
+		
+		I also recently developed an interest in music composition and sound design.
+		I am currently working on developing a virtual reality DAW in a research project.
+		
+		<br><br>
+		
+		Finally, I recently became interested in web development.
+		I am amazed at the power of websites because they have the power to influence many users all at once.
+		With just a spark, someone with web development skills could improve the lives of many.
+		
+		<br><br>
+		
+		My experience at UC Irvine has been great so far.
+		I'm looking forward to learning a lot about current technologies and applying my knowledge to doing something awesome.
+		In the meantime, I'll continue building this website and making it look prettier.
+		
+		</p>
+	</div>
 	
-		<h3 align="center">My Work</h3>
+	<div id="portfolio">
+	
+		<h2>My Work</h2>
 
 		<ul>
-			<li>
-				<a href="dialogue_node_editor.html">[Work in progress] Dialogue node editor</a>
-				<p>
-				Trying to create a tool to easily create dialogue nodes.
-				If the HTML DOM objects (nodes) could be serialized as JSON, there could be a script
-				that parses the JSON and creates Scriptable Objects in Unity.
-				<br>
-				Then I could add a lot of dialogue to my game with branches, loops, and events easily.
-				</p>
-			</li>
 			<li>
 				<video autoplay muted loop>
 					<source src="./video/balls_in_a_box_demo.mp4" type="video/mp4">
@@ -81,8 +95,23 @@
 				<a href="mouse_floater.html">Mouse floater</a>
 				<p>A cute little thing I built in JavaScript to learn how to track the mouse position.</p>
 			</li>
+			<li>
+				<a href="dialogue_node_editor.html">[Work in progress] Dialogue node editor</a>
+				<p>
+				Trying to create a tool to easily create dialogue nodes.
+				If the HTML DOM objects (nodes) could be serialized as JSON, there could be a script
+				that parses the JSON and creates Scriptable Objects in Unity.
+				<br>
+				Then I could add a lot of dialogue to my game with branches, loops, and events easily.
+				</p>
+			</li>
 		</ul>
 	<div>
+	
+	<div id="contact">
+		<h2> Contact Me </h2>
+		<p id="email">jthuang2@uci.edu</p>
+	</div>
 	
 </body>
 
