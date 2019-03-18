@@ -102,8 +102,8 @@ function drawLine(startX, startY, endX, endY)
 	line.setAttributeNode(ax2);
 	line.setAttributeNode(ay2);
 	
-	line.attributes[1].value = startX.toString(); // x1
-	line.attributes[2].value = startY.toString(); // y1
+	line.x1 = startX.toString(); // x1
+	line.x2 = startY.toString(); // y1
 	line.attributes[3].value = endX.toString();   // x2
 	line.attributes[4].value = endY.toString();   // y2
 	
@@ -115,10 +115,12 @@ function drawLine(startX, startY, endX, endY)
 	
 	var line = document.getElementById("test_line");
 	
-	line.attributes[1].value = startX.toString(); // x1
-	line.attributes[2].value = startY.toString(); // y1
-	line.attributes[3].value = endX.toString();   // x2
-	line.attributes[4].value = endY.toString();   // y2
+	console.log(line);
+	
+	line.x1 = startX.toString(); // x1
+	line.y1 = startY.toString(); // y1
+	line.x2 = endX.toString();   // x2
+	line.y2 = endY.toString();   // y2
 	
 	// afterwards, remove the listeners from all inlets
 	removeOnClickDrawLineTo_ForAllInlets();
