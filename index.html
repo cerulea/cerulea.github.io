@@ -24,7 +24,7 @@
 		<h2>Aspiring software engineer</h2>
 		
 		<!-- Dungeon crawler video -->
-		<video autoplay muted loop>
+		<video id="dungeon_crawler" autoplay muted loop>
 			<source src="./video/dungeon_crawler.mp4" type="video/mp4">
 		</video>
 	</div>
@@ -61,7 +61,7 @@
 	<div id="about">
 		<h2>About Me</h2>
 		<p>
-		I'm Jona, a second year computer science student at the University of California, Irvine.
+		I'm Jona, a second year computer science student at the University of California, Irvine (UCI).
 		I like programming, math, music, and anything tech.
 		The summer after high school, I got into game development with Unity.
 		I studied C# from Jamie King's C# tutorials on YouTube as the same time I picked up Unity,
@@ -74,14 +74,7 @@
 		
 		<br><br>
 		
-		Finally, I recently became interested in web development.
-		I am amazed at the power of websites because they have the power to influence many people at once.
-		With just a spark of inspiration, someone with web development skills could provide a vaulable service to
-		anyone browsing the web.
-		
-		<br><br>
-		
-		My experience at UC Irvine has been great so far.
+		My experience at UCI has been great so far.
 		I'm looking forward to learning a lot about current technologies and applying my knowledge to doing something awesome.
 		In the meantime, I'll continue building this website and making it look more elegant.
 		
@@ -94,12 +87,39 @@
 
 		<ul>
 			<li>
-				<a href="dungeon_crawler.html">[Work in progress] Dungeon Crawler RPG</a>
+				<h3>Dungeon RPG Prototype</h3>
 				<p>
-				A page devoted to my dungeon crawler RPG,
-				and what I hope to do with the game in the future.
+					Inspired by dungeon crawler titles such as the Etrian Odyssey series, I set off to build my own
+					<a href="#dungeon_crawler">dungeon crawler</a>.
+					My current progress is shown above in the video at the top of the page.
+					I have temporarily turned off the enemies walking around on the dungeon
+					because I am currently working on building the various interactable objects of the dungeon.
+					
+					<br><br>
+					
+					Making a game is ... a lot of work!
+					Coding the various systems (dialogue, dungeon, traps, menus, towns, states, quests)
+					has taught me a lot about good program design.
+					I thoroughly enjoy the challenge.
 				</p>
 			</li>
+			<li>
+				<h3>Tile Editor</h3>
+				<p>
+				I've always wanted to create my own virtual worlds to explore.
+				One tool that could help tremendously with world-building is a tile editor.
+				A tile editor allows a level designer to sketch out levels quickly with an intuitive UI.
+				Below is my (unfinished) tile editor created for my dungeon crawler.
+				Currently, you can paint the ground tiles of a level,
+				press "Save," and load the level (serialized as JSON) into the dungeon scene. Pretty neat!
+				</p>
+				<video autoplay muted loop>
+					<source src="./video/tile_editor.mp4" type="video/mp4">
+				</video>
+			</li>
+			
+			<!--
+			
 			<li>
 				<video autoplay muted loop>
 					<source src="./video/balls_in_a_box_demo.mp4" type="video/mp4">
@@ -112,7 +132,11 @@
 				<a href="mouse_floater.html">Mouse floater</a>
 				<p>A cute little thing I built in JavaScript to learn how to track the mouse position.</p>
 			</li>
+			
+			-->
+			
 			<li>
+				<h3>Dialogue node editor</h3>
 				<a href="dialogue_node_editor.html">[Work in progress] Dialogue node editor</a>
 				<p>
 				Trying to create a tool to easily create dialogue nodes.
