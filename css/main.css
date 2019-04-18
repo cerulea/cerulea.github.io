@@ -14,7 +14,7 @@ html, body {
 	padding: 0;
 	position: sticky;
 	*/
-	background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf   100%);
+	background-color: #333;
 	position: fixed;
 	top: 0;
 	z-index: 100;
@@ -46,6 +46,10 @@ html, body {
 	float: left;
 	border-right: 1px solid #bbb;
 	
+}
+
+.navbar li:hover {
+	background-color: #111;
 }
 
 /* Doesn't work yet */
@@ -93,6 +97,14 @@ p {
 	margin-left: 40px;
 	font-family: Courier;
 	font-size: 20px;
+}
+
+iframe {
+	background-color: #FFFFFF; /* Need this CSS style to overwrite *this* index.html's #portfolio's bg color */
+	margin: auto;
+	height: 800;
+	width: 800;
+	display: block;
 }
 
 #email {
